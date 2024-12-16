@@ -66,3 +66,5 @@ jobs:
           chmod 600 ec2_key.pem
           # Copy the JAR file to the EC2 instance
           scp -i ec2_key.pem target/*.jar $EC2_USER@$EC2_HOST:$TARGET_PATH
+   
+          
