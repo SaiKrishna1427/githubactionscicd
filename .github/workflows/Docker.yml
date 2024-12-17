@@ -32,7 +32,7 @@ jobs:
         run: |
           ssh -i ec2_key.pem $EC2_USER@$EC2_HOST << 'EOF'
             # Change to the directory containing the JAR file
-            cd /root/u003/
+            cd /home/ec2-user/jar/
 
             # Move Dockerfile into this directory
             mv /tmp/Dockerfile .
