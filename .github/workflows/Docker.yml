@@ -11,6 +11,11 @@ jobs:
       # Step 1: Checkout the repository
       - name: Checkout Code
         uses: actions/checkout@v2
+      # Step : To avoid Verification errors
+      - name: Add SSH Host Key
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
 
       # Step 2: Copy Dockerfile to EC2
       - name: Copy Dockerfile to EC2
