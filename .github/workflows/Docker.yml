@@ -43,8 +43,8 @@ jobs:
             mv /tmp/Dockerfile .
 
             # Build Docker Image
-            docker build -t Hello-app:latest .
+            docker build -t hello-app:latest .
 
             # Run Docker Container
-            docker run -d -p 8081:8081 --name demo-app Hello-app:latest
+            docker run -d -p 8081:8081 --name demo-app hello-app:latest
           EOF
