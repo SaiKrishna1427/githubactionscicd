@@ -59,12 +59,12 @@ jobs:
           EC2_HOST: ${{ secrets.EC2_HOST }}
           EC2_USER: ${{ secrets.EC2_USER }}
           EC2_KEY: ${{ secrets.EC2_KEY }}
-          TARGET_PATH: /root/u003/
+          TARGET_PATH: /home/ec2-user/jar/
         run: |
           # Save the private key from secrets
           echo "$EC2_KEY" > ec2_key.pem
           chmod 600 ec2_key.pem
           # Copy the JAR file to the EC2 instance
-          scp -v -i ec2_key.pem target/*.jar root@$EC2_HOST:$TARGET_PATH
+          scp -v -i ec2_key.pem target/*.jar $EC2_USER@$EC2_HOST:$TARGET_PATH
    
           
