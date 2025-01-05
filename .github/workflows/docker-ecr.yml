@@ -38,9 +38,9 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t ${{ secrets.ECR_REPOSITORY }}:1 .
-          docker tag ${{ secrets.ECR_REPOSITORY }}:1 911167916341.dkr.ecr.ap-southeast-5.amazonaws.com/${{ secrets.ECR_REPOSITORY }}:1
+          docker tag ${{ secrets.ECR_REPOSITORY }}:1 911167916341.dkr.ecr.ap-southeast-5.amazonaws.com/${{ secrets.ECR_REPOSITORY }}:sample
 
       # Step 5: Push the image to ECR
       - name: Push Docker image to ECR
         run: |
-          docker push 911167916341.dkr.ecr.ap-southeast-5.amazonaws.com/${{ secrets.ECR_REPOSITORY }}:1
+          docker push 911167916341.dkr.ecr.ap-southeast-5.amazonaws.com/${{ secrets.ECR_REPOSITORY }}:sample
