@@ -13,7 +13,7 @@ jobs:
       - name: Replace string in file
         run: |
           # Replace 'old-string' with 'new-string' in file.txt
-          sed -i 's/Hello World:Welcome to lenorasoft technologies private limited/Hellllloooooo/g' src/main/java/com/example/demo/controller/UserController.java
+          sed -i 's/Hello World:Welcome to lenorasoft technologies private limited/Hellllloooooo.....Hiiii/g' src/main/java/com/example/demo/controller/UserController.java
 
       - name: Show modified file
         run: cat src/main/java/com/example/demo/controller/UserController.java
